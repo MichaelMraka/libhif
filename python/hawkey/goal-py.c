@@ -472,7 +472,7 @@ describe_problem_rules(_GoalObject *self, PyObject *index_obj)
         return NULL;
     }
     const char **plist = hy_goal_describe_problem_rules(self->goal,
-                                                       PyLong_AsLong(index_obj));
+                                                        PyLong_AsLong(index_obj));
     if (plist == NULL) {
         PyErr_SetString(PyExc_ValueError, "Index out of range.");
         return NULL;
